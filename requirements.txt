@@ -1,0 +1,34 @@
+# ==============================================
+# MERLIN - Electricity Demand Model Requirements
+# ==============================================
+
+# 1. Manipulación de Datos y Matemáticas
+pandas>=2.1.0
+numpy>=1.23.0
+scipy>=1.11.0
+geopandas
+xarray 
+rioxarray
+
+# 2. Machine Learning y Preprocesamiento
+scikit-learn>=1.3.0
+joblib>=1.3.0
+
+# 3. Deep Learning (Multilayer Perceptron)
+tensorflow>=2.15.0
+
+# 4. Análisis de Series Temporales (False Nearest Neighbors)
+# Instalación directa desde el código fuente oficial para evitar errores de PyPI
+https://github.com/manu-mannattil/nolitsa/archive/refs/heads/master.zip
+numba
+
+# 5. Visualización y Exploración de Datos
+matplotlib>=3.7.0
+seaborn>=0.13.0
+
+# 6. Entorno de Desarrollo (Jupyter)
+jupyter>=1.0.0
+ipykernel>=6.25.0
+
+# 7. Otras
+holidays

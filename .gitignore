@@ -1,0 +1,31 @@
+# --- Datos del Proyecto (Ignorar carpetas data y su contenido pesado) ---
+**/data/*
+# Permitir que Git rastree la existencia de las carpetas 'data' pero no sus archivos pesados
+!**/data/
+!**/data/.gitkeep
+
+# --- Entornos Virtuales y Python ---
+.env/
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# --- Configuraciones de Editores e IDEs ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# --- Sistema Operativo ---
+.DS_Store
+Thumbs.db
