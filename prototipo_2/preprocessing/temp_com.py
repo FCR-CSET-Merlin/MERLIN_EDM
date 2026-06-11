@@ -38,9 +38,9 @@ def main():
     resultados = []
     
     print("2. Iniciando iteración de archivos de temperatura...")
-    for year in range(2017, 2018):
+    for year in range(2017, 2027):
         # Manejar la excepción del año 2026 (solo hasta mayo)
-        meses = range(1, 2) if year < 2026 else range(1, 6)
+        meses = range(1, 13) if year < 2026 else range(1, 6)
         
         for month in meses:
             archivo_nc = os.path.join(TEMP_DIR, f"era5land_t2m_chile_{year}_{month:02d}.nc")
