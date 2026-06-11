@@ -10,6 +10,7 @@ geopandas
 xarray 
 rioxarray
 netcfd4
+pyarrow
 
 # 2. Machine Learning y Preprocesamiento
 scikit-learn>=1.3.0
