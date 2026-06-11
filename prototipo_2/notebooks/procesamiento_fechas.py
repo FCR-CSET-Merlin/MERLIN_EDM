@@ -23,3 +23,22 @@ print("Comunas/Regiones únicas:", df_validacion['comuna'].nunique())
 # 3. Mostrar una pequeña muestra visual
 print(df_validacion.head())
 print(df_validacion.tail())
+
+
+## OUTPUT
+# Fecha inicio: 2017-01-01 00:00:00
+# Fecha fin: 2026-05-11 23:00:00
+# Total de horas únicas: 82032
+# Comunas/Regiones únicas: 345
+#             fecha_hora   comuna
+# 0  2017-01-01 00:00:00  IQUIQUE
+# 1  2017-01-01 01:00:00  IQUIQUE
+# 2  2017-01-01 02:00:00  IQUIQUE
+# 3  2017-01-01 03:00:00  IQUIQUE
+# 4  2017-01-01 04:00:00  IQUIQUE
+#                    fecha_hora       comuna
+# 28301035  2026-05-11 19:00:00  SAN NICOLÁS
+# 28301036  2026-05-11 20:00:00  SAN NICOLÁS
+# 28301037  2026-05-11 21:00:00  SAN NICOLÁS
+# 28301038  2026-05-11 22:00:00  SAN NICOLÁS
+# 28301039  2026-05-11 23:00:00  SAN NICOLÁS
