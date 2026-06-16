@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import json
 
 def prepare_sector_shares(sectorial_filepath, projection_years=[2017, 2025, 2026]):
     """
@@ -82,7 +83,7 @@ def prepare_sector_shares(sectorial_filepath, projection_years=[2017, 2025, 2026
     
     return df_shares
 
-def merge_shares_to_hourly(hourly_filepath, df_shares, output_filepath):
+def merge_shares_to_hourly(hourly_filepath, df_shares, output_filepath, alias_filepath):
 
     print(f"\n2. Cargando matriz horaria COMUNAL desde: {hourly_filepath}")
     # CAMBIO: Usar read_parquet para procesar el formato binario de forma eficiente
@@ -91,11 +92,26 @@ def merge_shares_to_hourly(hourly_filepath, df_shares, output_filepath):
     # Asegurar el formato datetime (Parquet lo suele mantener, pero es una buena práctica)
     df_hourly['fecha_hora'] = pd.to_datetime(df_hourly['fecha_hora'])
     df_hourly['year'] = df_hourly['fecha_hora'].dt.year
+
+    print(f"Cargando alias de regiones desde: {alias_filepath}")
+    with open(alias_filepath, 'r', encoding='utf-8') as f:
+        reg_alias = json.load(f)
+        
+    # Asumimos que tu JSON tiene la estructura: {"Nombre_Region_Datos_Horarios": "Nombre_Region_BNE"}
+    # Creamos una columna llave temporal en los datos horarios llamada 'region_bne'
+    df_hourly['region_bne'] = df_hourly['region'].map(reg_alias)
     
-    print("   Haciendo broadcasting de las variables espaciales (Región -> Comunas) a resolución horaria...")
-    # LA MAGIA OCURRE AQUÍ: Al hacer merge por 'year' y 'region', Pandas asigna 
-    # automáticamente los shares a todas las comunas que comparten esa región.
-    df_final = pd.merge(df_hourly, df_shares, on=['year', 'region'], how='left')
+    # Verificación de seguridad: Avisar si alguna región no hizo match
+    unmapped = df_hourly[df_hourly['region_bne'].isna()]['region'].unique()
+    if len(unmapped) > 0:
+        print(f"ADVERTENCIA: Las siguientes regiones no se encontraron en el JSON y quedarán nulas: {unmapped}")
+        
+    # Para poder hacer el merge, renombramos temporalmente la columna 'region' del DataFrame BNE a 'region_bne'
+    df_shares_renamed = df_shares.rename(columns={'region': 'region_bne'})
+    
+    print("Haciendo broadcasting de las variables espaciales (Región -> Comunas) a resolución horaria...")
+    # Hacemos el cruce usando 'year' y nuestra nueva llave homologada 'region_bne'
+    df_final = pd.merge(df_hourly, df_shares_renamed, on=['year', 'region_bne'], how='left')
     df_final = df_final.drop(columns=['year'])
     
     os.makedirs(os.path.dirname(output_filepath), exist_ok=True)
@@ -110,6 +126,7 @@ if __name__ == "__main__":
     
     SECTORIAL_FILE = "../data/raw/wp2_elec_input_sector_shares_raw.csv" 
     HOURLY_FILE = "../data/interim/calendario_comunal_features.parquet" 
+    ALIAS_FILE = "../data/raw/reg_alias.json"  # <--- NUEVA RUTA
     FINAL_OUTPUT = "../data/interim/sector_shares_comunal.parquet" 
     
     if os.path.exists(SECTORIAL_FILE) and os.path.exists(HOURLY_FILE):
@@ -117,11 +134,11 @@ if __name__ == "__main__":
         df_shares_calc = prepare_sector_shares(SECTORIAL_FILE)
         
         # 2. Inyectar los shares regionales a cada comuna hora por hora
-        df_ml_ready = merge_shares_to_hourly(HOURLY_FILE, df_shares_calc, FINAL_OUTPUT)
+        df_ml_ready = merge_shares_to_hourly(HOURLY_FILE, df_shares_calc, FINAL_OUTPUT, ALIAS_FILE)
         
         print("\nMuestra de las nuevas variables espaciales (Nota cómo la comuna hereda la info de su región):")
         # Mostrar 'comuna' explícitamente para comprobar el éxito del script
-        cols_to_show = ['valid_time', 'comuna', 'region', 'region_share', 'share_I', 'share_R']
+        cols_to_show = ['fecha_hora', 'comuna', 'region', 'region_share', 'share_I', 'share_R']
         
         # Si la columna se llama diferente en tu parquet (ej. 'Comuna'), ajusta el nombre en cols_to_show
         if 'comuna' in df_ml_ready.columns:
