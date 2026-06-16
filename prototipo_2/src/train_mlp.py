@@ -1,0 +1,77 @@
+import pandas as pd
+import tensorflow as tf
+from tensorflow.python.keras.models import Sequential
+from tensorflow.python.keras.layers import Dense, Dropout, Input
+from tensorflow.python.keras.callbacks import EarlyStopping, ModelCheckpoint
+import os
+
+def load_and_split_xy(filepath, target_col='demanda_mwh'):
+    print(f"Cargando {filepath}...")
+    df = pd.read_parquet(filepath, engine='pyarrow')
+    
+    # Separar variables predictoras (X) de la variable objetivo (y)
+    y = df[target_col].values
+    X = df.drop(columns=[target_col]).values
+    
+    return X, y
+
+def build_mlp_model(input_dim):
+    """
+    Construye la arquitectura del Perceptrón Multicapa (MLP).
+    Los hiperparámetros (neuronas, capas) se pueden ajustar iterativamente.
+    """
+    model = Sequential([
+        Input(shape=(input_dim,)),
+        Dense(256, activation='elu'),
+        Dropout(0.2), # Previene el sobreajuste apagando neuronas aleatoriamente
+        Dense(128, activation='elu'),
+        Dropout(0.2),
+        Dense(64, activation='elu'),
+        Dense(32, activation='elu'),
+        Dense(1, activation='linear') # Capa de salida (1 valor numérico)
+    ])
+    
+    # Compilar usando el optimizador Adam y Error Cuadrático Medio (MSE)
+    model.compile(optimizer='adam', loss='mse', metrics=['mae'])
+    return model
+
+if __name__ == "__main__":
+    # 1. Definir rutas
+    TRAIN_FILE = "../data/processed/train_merlin.parquet"
+    VAL_FILE   = "../data/processed/val_merlin.parquet"
+    MODEL_DIR  = "../models/"
+    os.makedirs(MODEL_DIR, exist_ok=True)
+    
+    # 2. Cargar datos
+    X_train, y_train = load_and_split_xy(TRAIN_FILE)
+    X_val, y_val     = load_and_split_xy(VAL_FILE)
+    
+    print(f"-> Shape de Entrenamiento: X={X_train.shape}, y={y_train.shape}")
+    print(f"-> Shape de Validación:  X={X_val.shape}, y={y_val.shape}")
+    
+    # 3. Construir modelo
+    input_dimension = X_train.shape[1]
+    model = build_mlp_model(input_dimension)
+    model.summary()
+    
+    # 4. Configurar Callbacks
+    # EarlyStopping: Detiene el entrenamiento si el error de validación no mejora en 10 épocas
+    early_stop = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True, verbose=1)
+    
+    # ModelCheckpoint: Guarda automáticamente la mejor versión del modelo
+    checkpoint = ModelCheckpoint(os.path.join(MODEL_DIR, 'best_merlin_mlp.keras'), 
+                                 monitor='val_loss', save_best_only=True, verbose=1)
+    
+    # 5. ¡Entrenar la Red Neuronal!
+    # Usamos un batch_size gigante (8192) porque son millones de filas.
+    print("\nIniciando entrenamiento...")
+    history = model.fit(
+        X_train, y_train,
+        validation_data=(X_val, y_val),
+        epochs=100,           # Máximo de épocas (EarlyStopping cortará antes si es necesario)
+        batch_size=8192,      # Lotes grandes para acelerar el procesamiento
+        callbacks=[early_stop, checkpoint],
+        verbose=1
+    )
+    
+    print("\n¡Entrenamiento finalizado y modelo guardado!")
