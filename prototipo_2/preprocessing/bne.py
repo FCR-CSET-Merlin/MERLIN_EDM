@@ -63,10 +63,10 @@ def prepare_sector_shares(sectorial_filepath, projection_years=[2017, 2025, 2026
     projections = []
     for py in projection_years:
         if py == 2017:
-            print(f"   Proyectando configuración espacial de 2018 para el año {py}...")
+            print(f"Proyectando configuración espacial de 2018 para el año {py}...")
             df_proj = df_2018.copy()
         else:
-            print(f"   Proyectando configuración espacial de 2024 para el año {py}...")
+            print(f"Proyectando configuración espacial de 2024 para el año {py}...")
             df_proj = df_2024.copy()
         df_proj['año'] = py
         projections.append(df_proj)
@@ -75,7 +75,7 @@ def prepare_sector_shares(sectorial_filepath, projection_years=[2017, 2025, 2026
     
     # Validación matemática
     check_sum = df_shares[df_shares['año'] == 2024]['region_share'].sum()
-    print(f"   Validación matemática: La suma de los region_shares en 2024 es {check_sum:.4f} (Debe ser ~1.0)")
+    print(f"Validación matemática: La suma de los region_shares en 2024 es {check_sum:.4f} (Debe ser ~1.0)")
 
     # Renombrar columnas para el cruce con el archivo Parquet
     df_shares = df_shares.rename(columns={"año": "year", "región": "region"})
@@ -89,8 +89,8 @@ def merge_shares_to_hourly(hourly_filepath, df_shares, output_filepath):
     df_hourly = pd.read_parquet(hourly_filepath)
     
     # Asegurar el formato datetime (Parquet lo suele mantener, pero es una buena práctica)
-    df_hourly['valid_time'] = pd.to_datetime(df_hourly['valid_time'])
-    df_hourly['year'] = df_hourly['valid_time'].dt.year
+    df_hourly['fecha_hora'] = pd.to_datetime(df_hourly['fecha_hora'])
+    df_hourly['year'] = df_hourly['fecha_hora'].dt.year
     
     print("   Haciendo broadcasting de las variables espaciales (Región -> Comunas) a resolución horaria...")
     # LA MAGIA OCURRE AQUÍ: Al hacer merge por 'year' y 'region', Pandas asigna 
