@@ -29,3 +29,6 @@ pip-delete-this-directory.txt
 # --- Sistema Operativo ---
 .DS_Store
 Thumbs.db
+
+# --- Modelos --- 
+**/models/*
