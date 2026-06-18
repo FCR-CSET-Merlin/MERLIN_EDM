@@ -39,9 +39,12 @@ def build_mlp_model(input_dim):
 
 if __name__ == "__main__":
     
-    prototype = True  ##### MODIFICAR ESTO SI ES NECESARIO
+    prototype_S = False  ##### MODIFICAR ESTO SI ES NECESARIO
+    prototype_RM = True
 
-    if prototype:
+    if prototype_S:
+
+        print("Cargando datos de comuna de Santiago")
 
         # 0. Parámetros
         patience = 10
@@ -54,8 +57,27 @@ if __name__ == "__main__":
         MODEL_DIR  = "../models/"
         NAME = "best_merlin_mlp_stgo.keras"
         os.makedirs(MODEL_DIR, exist_ok=True)
+
+    if prototype_RM: 
+
+        print("Cargando datos de Región Metropolitana")
+
+        # 0. Parámetros
+        patience = 10
+        epochs = 100
+        batch_size = 256
+
+        # 1. Definir rutas
+        TRAIN_FILE = "../data/processed/train_merlin_RM.parquet"
+        VAL_FILE   = "../data/processed/val_merlin_RM.parquet"
+        MODEL_DIR  = "../models/"
+        NAME = "best_merlin_mlp_RM.keras"
+        os.makedirs(MODEL_DIR, exist_ok=True)
+
     
-    elif not prototype: 
+    elif not (prototype_S or prototype_RM):
+
+        print("Cargando datos de todas las comunas")
 
         # 0. Parámetros
         patience = 10

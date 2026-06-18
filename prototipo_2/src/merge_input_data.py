@@ -71,18 +71,25 @@ def load_and_merge_data(temp_demand_path, calendar_path, shares_path, demand_pat
     print(f"-> Dataset unificado creado con {len(df_final)} filas y {len(df_final.columns)} columnas.")
 
     if prototype: 
-        print("-> Extrayendo datos de la comuna de Santiago")
+
+        print("-> Extrayendo datos de la comuna de Santiago y la Región Metropolitana")
+        # Comuna de Santiago
         df_santiago = df_final.loc[df_final["comuna"] == "SANTIAGO"].copy()
         df_santiago = df_santiago.sort_values(by=["fecha_hora"]).reset_index(drop=True)
+        # Región metropolitana
+        df_RM = df_final.loc[df_final["region"] == "METROPOLITANA DE SANTIAGO"].copy()
+        df_RM = df_RM.sort_values(by=["fecha_hora"]).reset_index(drop=True)
+        comunas = df_RM["comuna"].unique().tolist()
+        print(f"    -> Cantidad de comunas identificadas: {len(comunas)}")
 
-        return df_final, df_santiago
+        return df_final, df_santiago, df_RM
 
     else: 
 
         return df_final
 
 
-def split_and_scale_data(df, train_end_year=2021, val_end_year=2021, is_prototype=True): 
+def split_and_scale_data(df, train_end_year=2021, val_end_year=2021, is_prototype_S=False, is_prototype_RM=False, raw=False): 
 
     print("\n3. Realizando División Cronológica (Train / Val / Test)...")
     
@@ -103,6 +110,12 @@ def split_and_scale_data(df, train_end_year=2021, val_end_year=2021, is_prototyp
 
     if "region_bne" in train_df.columns:
         cols_to_drop.append("region_bne")
+    
+    if raw:  # SOLO EN CASO DE LA RM
+        print(" -> Guardado de metadatos de la RM en ../data/processed/")
+        train_df.to_parquet("../data/processed/train_RM_metadata.parquet", index=False)
+        val_df.to_parquet("../data/processed/val_RM_metadata.parquet", index=False)
+        test_df.to_parquet("../data/processed/test_RM_metadata.parquet", index=False)
         
     train_df = train_df.drop(columns=cols_to_drop, errors='ignore')
     val_df   = val_df.drop(columns=cols_to_drop, errors='ignore')
@@ -121,7 +134,18 @@ def split_and_scale_data(df, train_end_year=2021, val_end_year=2021, is_prototyp
     temp_scaler = MinMaxScaler(feature_range=(0, 1))
     # FIT SOLAMENTE EN TRAIN (Regla de oro)
     train_df[temp_columns] = temp_scaler.fit_transform(train_df[temp_columns])
-    t_sc_dir = "../models/scaler_temp_santiago.pkl" if is_prototype else "../models/scaler_temp.pkl"
+    if is_prototype_S: 
+        t_sc_dir = "../models/scaler_temp_santiago.pkl"
+        d_sc_dir = "../models/scaler_demand_santiago.pkl"
+
+    elif is_prototype_RM: 
+        t_sc_dir = "../models/scaler_temp_RM.pkl"
+        d_sc_dir = "../models/scaler_demand_RM.pkl"
+    
+    else: 
+        t_sc_dir = "../models/scaler_temp.pkl"
+        d_sc_dir = "../models/scaler_demand.pkl"
+    
     print(f"        -> Guardando parámetros de escalamiento de la temperatura en {t_sc_dir}")
     joblib.dump(temp_scaler, t_sc_dir)
     val_df[temp_columns] = temp_scaler.transform(val_df[temp_columns])
@@ -133,7 +157,6 @@ def split_and_scale_data(df, train_end_year=2021, val_end_year=2021, is_prototyp
         target_scaler = MinMaxScaler(feature_range=(0, 1))
         # Se requiere doble corchete para mantener la estructura 2D de pandas que pide sklearn
         train_df[['demanda_mwh']] = target_scaler.fit_transform(train_df[['demanda_mwh']])
-        d_sc_dir = "../models/scaler_demand_santiago.pkl" if is_prototype else "../models/scaler_demand.pkl"
         print(f"        -> Guardando parámetros de escalamiento de la demanda en {d_sc_dir}")
         joblib.dump(target_scaler, d_sc_dir)
         val_df[['demanda_mwh']]   = target_scaler.transform(val_df[['demanda_mwh']])
@@ -172,14 +195,16 @@ if __name__ == "__main__":
         
         if prototype:
             # 1. Unificar (Ahora incluye la demanda filtrando "huecos")
-            master_df, stgo_df = load_and_merge_data(TEMP_DEMAND_FILE, CALENDAR_FILE, SHARES_FILE, DEMAND_FILE, prototype=True)
+            master_df, stgo_df, rm_df = load_and_merge_data(TEMP_DEMAND_FILE, CALENDAR_FILE, SHARES_FILE, DEMAND_FILE, prototype=True)
             
             # 2. Dividir y Escalar (Train: hasta 2021, Val: 2022, Test: 2023+)
             # Retorna datasets 100% numéricos ("ciegos")
             # Primero, escalamos y separamos el dataset del conjunto completo
-            train, val, test, temp_scaler, target_scaler = split_and_scale_data(master_df, train_end_year=2021, val_end_year=2021, is_prototype=False)
-            # Segundo, escalamos y separamos el dataset del subconjunto del prototipo 
-            train_stgo, val_stgo, test_stgo, _, _ = split_and_scale_data(stgo_df, train_end_year=2021, val_end_year=2021, is_prototype=True)
+            train, val, test, temp_scaler, target_scaler = split_and_scale_data(master_df, train_end_year=2021, val_end_year=2021)
+            # Segundo, escalamos y separamos el dataset del subconjunto del primer prototipo (SANTIAGO)
+            train_stgo, val_stgo, test_stgo, _, _ = split_and_scale_data(stgo_df, train_end_year=2021, val_end_year=2021, is_prototype_S=True)
+            # Tercero, escalamos y separamos el dataset del subconjunto del segundo prototipo (METROPOLITANA DE SANTIAGO)
+            train_RM, val_RM, test_RM, _, _ = split_and_scale_data(rm_df, train_end_year=2021, val_end_year=2021, is_prototype_RM=True, raw=True)
 
             # 3. Guardar matrices finales listas para la Red Neuronal
             print("\n5. Guardando particiones en data/processed/ ...")
@@ -189,6 +214,9 @@ if __name__ == "__main__":
             train_stgo.to_parquet(os.path.join(OUTPUT_DIR, "train_merlin_stgo.parquet"), index=False)
             val_stgo.to_parquet(os.path.join(OUTPUT_DIR, "val_merlin_stgo.parquet"), index=False)
             test_stgo.to_parquet(os.path.join(OUTPUT_DIR, "test_merlin_stgo.parquet"), index=False)
+            train_RM.to_parquet(os.path.join(OUTPUT_DIR, "train_merlin_RM.parquet"), index=False)
+            val_RM.to_parquet(os.path.join(OUTPUT_DIR, "val_merlin_RM.parquet"), index=False)
+            test_RM.to_parquet(os.path.join(OUTPUT_DIR, "test_merlin_RM.parquet"), index=False)
             
             print("\n¡Pipeline de preprocesamiento completado! Los datos están listos para TensorFlow/Keras.")
             
