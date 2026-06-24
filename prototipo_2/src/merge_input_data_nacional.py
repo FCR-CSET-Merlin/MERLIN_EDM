@@ -65,15 +65,20 @@ def split_and_scale_data(df, comuna_name, output_models_dir, train_end_year=2021
     train_df = train_df[train_df["year"] >= 2020]
     val_df   = df[df['year'] == val_end_year].copy()
     test_df  = df[df['year'] > val_end_year].copy() # 2023 en adelante
+
+    # Para evitar problemas con los nombres de archivo (espacios, etc.)
+    safe_comuna_name = comuna_name.replace(" ", "_")
+
+    # Guardar metadata necesario para postproceso
+    train_md = train_df.copy()
+    val_md = val_df.copy()
+    test_md = test_df.copy()
     
     # HACER EL DATASET "CIEGO" (Eliminar columnas no numéricas)
     cols_to_drop = ['year', 'fecha_hora', 'comuna', 'region', 'region_bne']
     train_df = train_df.drop(columns=[c for c in cols_to_drop if c in train_df.columns])
     val_df   = val_df.drop(columns=[c for c in cols_to_drop if c in val_df.columns])
     test_df  = test_df.drop(columns=[c for c in cols_to_drop if c in test_df.columns])
-    
-    # Para evitar problemas con los nombres de archivo (espacios, etc.)
-    safe_comuna_name = comuna_name.replace(" ", "_")
     
     # 1. Escalar Temperatura
     temp_columns = [col for col in train_df.columns if 'temp' in col.lower()]
@@ -105,7 +110,7 @@ def split_and_scale_data(df, comuna_name, output_models_dir, train_end_year=2021
     val_df   = val_df.astype('float32')
     test_df  = test_df.astype('float32')
         
-    return train_df, val_df, test_df
+    return train_df, val_df, test_df, train_md, val_md, test_md
 
 
 if __name__ == "__main__":
@@ -117,7 +122,7 @@ if __name__ == "__main__":
     
     # NUEVAS RUTAS DE SALIDA PARA EL ENFOQUE DE N MODELOS
     OUTPUT_DATA_DIR = "../data/processed/modelo_nacional/"
-    OUTPUT_MODELS_DIR = "../data/models/modelo_nacional/"
+    OUTPUT_MODELS_DIR = "../models/modelo_nacional/scaler/"
     
     os.makedirs(OUTPUT_DATA_DIR, exist_ok=True)
     os.makedirs(OUTPUT_MODELS_DIR, exist_ok=True)
@@ -146,7 +151,7 @@ if __name__ == "__main__":
                 
             try:
                 # Dividir, Escalar y Guardar Scalers
-                train, val, test = split_and_scale_data(
+                train, val, test, md_train, md_val, md_test = split_and_scale_data(
                     df_comuna, 
                     comuna_name=comuna, 
                     output_models_dir=OUTPUT_MODELS_DIR,
@@ -155,9 +160,12 @@ if __name__ == "__main__":
                 )
                 
                 # Guardar Parquets de la comuna
-                train.to_parquet(os.path.join(OUTPUT_DATA_DIR, f"train_{safe_name}.parquet"), index=False)
-                val.to_parquet(os.path.join(OUTPUT_DATA_DIR, f"val_{safe_name}.parquet"), index=False)
-                test.to_parquet(os.path.join(OUTPUT_DATA_DIR, f"test_{safe_name}.parquet"), index=False)
+                train.to_parquet(os.path.join(OUTPUT_DATA_DIR, f"ml_data/train_{safe_name}.parquet"), index=False)
+                val.to_parquet(os.path.join(OUTPUT_DATA_DIR, f"ml_data/val_{safe_name}.parquet"), index=False)
+                test.to_parquet(os.path.join(OUTPUT_DATA_DIR, f"ml_data/test_{safe_name}.parquet"), index=False)
+                md_train.to_parquet(os.path.join(OUTPUT_DATA_DIR, f"metadata/train_{safe_name}.parquet"), index=False)
+                md_val.to_parquet(os.path.join(OUTPUT_DATA_DIR, f"metadata/val_{safe_name}.parquet"), index=False)
+                md_test.to_parquet(os.path.join(OUTPUT_DATA_DIR, f"metadata/test_{safe_name}.parquet"), index=False)
                 
             except Exception as e:
                 print(f"      -> [ERROR] Falló el procesamiento de {comuna}: {e}")
