@@ -64,11 +64,13 @@ for filepath in archivos_val:
         # 7. Inicializar el DataFrame para esta comuna con totales
         df_res_local = df_metadata.copy()
         df_res_local['demanda_real_mwh'] = y_val_real
-        df_res_local['demanda_pred_total'] = y_pred_real
+        df_res_local['demanda_pred_mwh'] = y_pred_real
         
         # ==============================================================================
         # 7.5. DESAGREGACIÓN SECTORIAL (MÉTODO KUSUMOTO)
         # ==============================================================================
+        predicciones_puras = {}
+
         for sector, idx in idx_shares.items():
             # a) Crear copia de la matriz de entrada para el escenario "puro"
             X_val_puro = X_val_scaled.copy()
@@ -77,6 +79,7 @@ for filepath in archivos_val:
             for other_sector, other_idx in idx_shares.items():
                 if other_sector != sector:
                     X_val_puro[:, other_idx] = 0.0
+            X_val_puro[:, idx] = 1.0
                     
             # c) Predecir bajo el escenario alterado (silenciado)
             pred_escenario = model.predict(X_val_puro, verbose=0)
@@ -86,10 +89,28 @@ for filepath in archivos_val:
             
             # e) Aplicar Clipping para evitar valores negativos
             pred_mwh = np.maximum(0.0, pred_mwh)
+
+            # f) Guardar en un diccionario
+            predicciones_puras[sector] = pred_mwh
             
             # f) Guardar el sector en el dataframe local
-            df_res_local[f'demanda_pred_{sector}'] = pred_mwh
+            # df_res_local[f'demanda_pred_{sector}'] = pred_mwh
         # ==============================================================================
+        # Pasar a dataframe el resultado
+        df_puras = pd.DataFrame(predicciones_puras)
+
+        # Calcular la suma de las predicciones puras 
+        sectores = list(idx_shares.keys())
+        df_puras["suma_puras"] = df_puras[sectores].sum(axis=1)
+
+        # Calcular fracción horaria
+        df_fracciones = pd.DataFrame()
+        for sector in sectores: 
+            df_fracciones[f'fraccion_{sector}'] = df_puras[sector] / (df_puras['suma_puras'] + 1e-9)
+        
+        # Re-escalar con la demanda total
+        for sector in sectores: 
+            df_res_local[f'demanda_pred_{sector}'] = df_fracciones[f"fraccion_{sector}"] * df_res_local["demanda_pred_mwh"]
 
         # Guardar en la lista maestra
         lista_resultados.append(df_res_local)
