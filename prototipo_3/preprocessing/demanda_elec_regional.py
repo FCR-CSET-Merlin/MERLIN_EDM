@@ -28,6 +28,15 @@ def main():
     ruta_demanda_comunal = os.path.join(RAW_DIR, "demanda_comunal_horaria.csv")
     df_comunas = pd.read_csv(ruta_demanda_comunal).rename(columns={"valid_time": "fecha_hora"})
     df_comunas["fecha_hora"] = pd.to_datetime(df_comunas["fecha_hora"])
+    df_comunas["comuna"] = df_comunas["comuna"].str.upper()
+
+    # Correcciones particulares
+    cor = {
+        "LA CALERA": "CALERA", 
+        "LOS ANGELES": "LOS ÁNGELES", 
+        "LOS ALAMOS": "LOS ÁLAMOS"    
+    }
+    df_comunas["comuna"] = df_comunas["comuna"].replace(cor)
     # Geocapas
     ruta_geo_comunal = os.path.join(RAW_DIR, "capa_comunal.gpkg")
     gdf_comunas = gpd.read_file(ruta_geo_comunal)
@@ -37,6 +46,9 @@ def main():
     df_mapa = gdf_comunas[["comuna", "region"]].drop_duplicates()
     # Unir para asignar la región a cada registro comunal 
     df_comunas = pd.merge(df_comunas, df_mapa, on="comuna", how="left")
+    comunas_sin_region = df_comunas[df_comunas["region"].isna()]["comuna"].unique()
+    if len(comunas_sin_region) > 0:
+        print(f"ADVERTENCIA: Las siguientes comunas no cruzaron y se quedarán sin región: {comunas_sin_region}")
 
     print("3. Generando sumas de la demanda por región")
     # Sumar los datos por región
@@ -53,4 +65,3 @@ if __name__ == "__main__":
 
     main()
 
-    
