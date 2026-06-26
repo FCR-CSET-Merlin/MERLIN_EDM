@@ -28,7 +28,7 @@ def main():
     # Leeremos el dataset de temperatura SOLO para extraer su estructura base (fecha y region),
     # ignorando la columna de temperatura en la carga para ahorrar memoria.
     ruta_base = os.path.join(INTERIM_DIR, "temperatura_regional_horaria.parquet")
-    df = pd.read_parquet(ruta_base, columns=['fecha_hora', 'comuna'], engine="pyarrow")
+    df = pd.read_parquet(ruta_base, columns=['fecha_hora', 'region'], engine="pyarrow")
     df['fecha_hora'] = pd.to_datetime(df['fecha_hora'])
 
     print("2. Generando Señales Periódicas (Seno/Coseno) de Kusumoto...")
