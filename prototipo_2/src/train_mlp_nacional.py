@@ -30,7 +30,7 @@ def build_mlp_model(input_dim):
         # Dropout(0.2),
         Dense(64, activation='elu'),
         Dense(32, activation='elu'),
-        Dense(1, activation='linear') # Capa de salida (1 valor numérico)
+        Dense(1, activation='relu') # Capa de salida (1 valor numérico)
     ])
     
     # Compilar usando el optimizador Adam y la pérdida Huber
