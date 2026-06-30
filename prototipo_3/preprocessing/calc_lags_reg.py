@@ -26,7 +26,7 @@ def generate_temperature_lags(input_filepath, output_filepath, total_dimensions=
     for i in range(1, lags + 1): 
 
         col_name = f"temp_t - {i}"
-        df_long[col_name] = df_long.groupby("comuna")["temperatura"].shift(i)
+        df_long[col_name] = df_long.groupby("region")["temperatura"].shift(i)
     
     # 4. Limpieza de valores nulos 
     filas_antes = len(df_long)
