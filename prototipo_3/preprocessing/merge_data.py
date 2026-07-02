@@ -105,9 +105,9 @@ def split_and_scale_data(df, train_years, val_years, test_years, case_name):
     # Guardar metadatos
     train_md = train.copy()
     train_md.to_parquet(f"../data/processed/train_md_{case_name}.parquet", index=False)
-    val_md = train.copy()
+    val_md = val.copy()
     val_md.to_parquet(f"../data/processed/val_md_{case_name}.parquet", index=False)
-    test_md = train.copy()
+    test_md = test.copy()
     test_md.to_parquet(f"../data/processed/test_md_{case_name}.parquet", index=False)
 
     # 3. Estandarizar Demanda (Método Kusumoto)
