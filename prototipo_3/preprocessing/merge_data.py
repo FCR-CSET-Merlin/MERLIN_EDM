@@ -110,6 +110,8 @@ def split_and_scale_data(df, train_years, val_years, test_years, case_name):
     test_md = test.copy()
     test_md.to_parquet(f"../data/processed/test_md_{case_name}.parquet", index=False)
 
+    print(val_md["año"].head())
+
     # 3. Estandarizar Demanda (Método Kusumoto)
     # Usamos las columnas mu_total y sigma_total que ya deben estar en tu df_final
     for df_split in [train, val, test]:
@@ -184,6 +186,10 @@ if __name__ == "__main__":
     #   train = 2020
     #   val = 2021
     #   test = 2022
+    # Caso 3: 
+    #   train = 2018, 2019
+    #   val = 2020
+    #   test = 2021
     
     case_1 = "caso_1"
     train_c1, val_c1, test_c1 = split_and_scale_data(
@@ -202,3 +208,12 @@ if __name__ == "__main__":
     train_c2.to_parquet(f"../data/processed/train_{case_2}.parquet", index=False)
     val_c2.to_parquet(f"../data/processed/val_{case_2}.parquet", index=False)
     test_c2.to_parquet(f"../data/processed/test_{case_2}.parquet", index=False)
+
+    case_3 = "caso_3"
+    train_c3, val_c3, test_c3 = split_and_scale_data(
+        df_completo, train_years=[2018, 2019], val_years=[2020], test_years=[2021], case_name=case_3
+    )
+    
+    train_c3.to_parquet(f"../data/processed/train_{case_3}.parquet", index=False)
+    val_c3.to_parquet(f"../data/processed/val_{case_3}.parquet", index=False)
+    test_c3.to_parquet(f"../data/processed/test_{case_3}.parquet", index=False)

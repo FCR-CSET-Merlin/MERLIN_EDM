@@ -46,7 +46,7 @@ if __name__ == "__main__":
     patience = 15
     epochs = 100
     batch_size = 256
-    caso = "caso_2"
+    caso = "caso_3"
 
     # 1. Definir rutas
     TRAIN_FILE = f"../data/processed/train_{caso}.parquet"
