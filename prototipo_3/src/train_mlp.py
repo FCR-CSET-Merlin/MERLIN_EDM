@@ -6,7 +6,7 @@ from tensorflow.keras.losses import Huber # <- Añadida la pérdida de Huber
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
 import os
 
-def load_and_split_xy(filepath, target_col='demanda_mwh'):
+def load_and_split_xy(filepath, target_col='target_scaled'):
     print(f"Cargando {filepath}...")
     df = pd.read_parquet(filepath, engine='pyarrow')
     
@@ -46,7 +46,7 @@ if __name__ == "__main__":
     patience = 15
     epochs = 100
     batch_size = 256
-    caso = "caso_1"
+    caso = "caso_2"
 
     # 1. Definir rutas
     TRAIN_FILE = f"../data/processed/train_{caso}.parquet"
