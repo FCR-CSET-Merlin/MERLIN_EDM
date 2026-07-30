@@ -122,3 +122,64 @@ pip install -r requirements.txt
 ```
 
 *(Nota: Si planeas entrenar el modelo utilizando una GPU, asegúrate de tener instalados los drivers de NVIDIA y CUDA Toolkit correspondientes a la versión de TensorFlow especificada en el entorno).*
+
+#  Containerización y Ejecución con Docker
+
+Este repositorio cuenta con un `Dockerfile` optimizado para empaquetar todo el entorno de Machine Learning e ingeniería geoespacial (incluyendo dependencias complejas como GDAL, GEOS, PROJ y TensorFlow), garantizando un comportamiento reproducible e independiente del sistema operativo.
+
+A continuación se detallan las instrucciones para construir y ejecutar el contenedor según tu entorno de trabajo:
+
+### 1. Construcción de la Imagen Docker
+Ubícate en la carpeta raíz del repositorio (donde se encuentra el archivo `Dockerfile` y el `requirements.txt`) y ejecuta el siguiente comando para compilar la imagen:
+
+```bash
+docker build -t merlin-edm-app .
+```
+
+### 2. Ejecución del Contenedor por Escenarios
+
+Dado que el repositorio maneja archivos pesados y dinámicos (`.parquet`, `.gpkg`, modelos `.keras`) que no deben quemarse estáticamente dentro de la imagen, se utilizan volúmenes (`-v`) para enlazar las carpetas locales de tu equipo con el contenedor en tiempo de ejecución.
+
+#### Escenario A: En Servidor Linux (Con privilegios de Superusuario / `sudo`)
+
+Si te encuentras en el servidor institucional de Linux y el demonio de Docker requiere permisos de root:
+
+1. **Construir la imagen:**
+
+```Bash
+sudo docker build -t merlin-edm-app .
+```
+
+2. Ejecutar el contenedor (enlazando directorios con la ruta actual de Linux `$(pwd)`):
+
+```Bash
+sudo docker run --rm -v $(pwd)/data:/app/data -v$(pwd)/models:/app/models merlin-edm-app
+```
+
+*(Nota: Si el administrador del sistema te incorporó previamente al grupo docker, puedes omitir el uso de ``sudo`` en los comandos anteriores).*
+
+#### Escenario B: En Local con Docker Desktop para Windows (Sin restricciones de ``sudo``)
+
+Si estás ejecutando el pipeline de manera local en Windows utilizando Docker Desktop (a través de PowerShell, CMD o Git Bash):
+
+1. Construir la imagen:
+
+```Bash
+docker build -t merlin-edm-app .
+```
+
+2. Ejecutar el contenedor (en PowerShell, utilizando la variable de ruta nativa ``${PWD}``):
+
+```Bash
+docker run --rm -v ${PWD}/data:/app/data -v${PWD}/models:/app/models merlin-edm-app
+```
+
+#### Notas Operativas para el Relevo
+
+* **Gestión de Datos:** Los directorios de datos masivos (``data/``) y pesos de modelos (``models/``) no se versionan en Git por su tamaño. Asegúrate de tenerlos estructurados localmente antes de ejecutar el comando con volúmenes.
+
+* **Sobrescribir el Comando por Defecto:** Si necesitas ejecutar un script específico diferente al configurado por defecto en el ``Dockerfile`` (por ejemplo, un script de inferencia o preprocesamiento), puedes indicarlo al final del comando ``docker run``:
+
+```Bash
+docker run --rm -v ${PWD}/data:/app/data merlin-edm-app python prototipo_3/rec_2024_202
+```
