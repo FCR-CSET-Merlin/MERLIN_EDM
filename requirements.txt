@@ -34,3 +34,5 @@ ipykernel>=6.25.0
 
 # 7. Otras
 holidays
+sqlalchemy>=1.4.0
+psycopg2-binary>=2.9.0
