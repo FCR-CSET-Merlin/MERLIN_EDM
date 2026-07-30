@@ -1,0 +1,27 @@
+# Excluir control de versiones
+.git
+.gitignore
+
+# Excluir carpetas de datos pesados y temporales (se gestionan localmente o por volúmenes)
+data/raw/
+data/interim/
+data/processed/
+data/rec_2024_2025/results/
+
+# Excluir pesos pesados de modelos entrenados (si prefieres descargarlos o montarlos por volumen)
+models/**/*.keras
+models/**/*.pkl
+
+# Excluir entornos virtuales locales y caché de Python
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Excluir documentación o archivos del sistema operativo
+*.md
+.DS_Store
+Thumbs.db
