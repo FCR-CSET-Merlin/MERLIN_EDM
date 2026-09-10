@@ -9,7 +9,7 @@ scipy>=1.11.0
 geopandas
 xarray 
 rioxarray
-netcfd4
+netCDF4
 pyarrow
 
 # 2. Machine Learning y Preprocesamiento
