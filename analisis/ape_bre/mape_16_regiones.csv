@@ -1,0 +1,13 @@
+﻿año,sector,MAPE_pct,regiones,regiones_APE_definido,tipo_referencia
+2024,Total,1.1123284021457884,16,16,BRE disponible
+2024,Residencial,4.68556251915509,16,16,BRE disponible
+2024,Comercial,5.869039888700398,16,16,BRE disponible
+2024,Público,8.374013641340655,16,16,BRE disponible
+2024,Industrial,1.739168149407313,16,16,BRE disponible
+2024,Transporte,35.029145536825446,16,16,BRE disponible
+2025,Total,0.8188681683416676,16,16,BRE extrapolado linealmente; no observado
+2025,Residencial,5.004935108113021,16,16,BRE extrapolado linealmente; no observado
+2025,Comercial,4.899826826476987,16,16,BRE extrapolado linealmente; no observado
+2025,Público,8.79867390475948,16,16,BRE extrapolado linealmente; no observado
+2025,Industrial,1.6507877849643042,16,16,BRE extrapolado linealmente; no observado
+2025,Transporte,8.496379587470999,16,16,BRE extrapolado linealmente; no observado
