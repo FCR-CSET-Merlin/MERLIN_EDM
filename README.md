@@ -28,11 +28,20 @@ MERLIN_EDM/
 │       ├── forecast_edm/        # Motores modulares de inferencia (Shares, Scaling, Inference, Time Features).
 │       └── train_mlp_v2.py      # Script principal para entrenamiento del modelo global.
 │
+├── corfo-report/               # Reportes, tablas y figuras consolidados.
+│   ├── results/                # Figuras y tablas de simulaciones.
+│   └── validation/             # Comparaciones APE/MAPE y evidencia de validación.
+├── analisis/ape_bre/           # Script reproducible de APE/MAPE.
+│
 ├── .gitignore
 ├── README.md
 └── requirements.txt             # Dependencias del proyecto.
 ```
 ---
+
+## Reportes y validación
+
+Los reportes y resultados de comparación se encuentran en [corfo-report](corfo-report/README.md). Consulta el [reporte BRE 2024](corfo-report/validation/ape_bre/resultados_modelo_bre_2024.md) para los APE regionales y sectoriales y el MAPE entre las 16 regiones.
 
 ## Arquitectura del Modelo (Modelo Global)
 

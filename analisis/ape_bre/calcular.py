@@ -8,7 +8,8 @@ from pathlib import Path
 from statistics import mean
 
 ROOT = Path('/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3/data')
-OUT = Path(__file__).resolve().parent
+OUT = Path(__file__).resolve().parents[2] / 'corfo-report' / 'validation' / 'ape_bre'
+OUT.mkdir(parents=True, exist_ok=True)
 SECTORS = {'R': 'Residencial', 'C': 'Comercial', 'P': 'Público', 'I': 'Industrial', 'T': 'Transporte'}
 aliases = json.loads((ROOT / 'raw/reg_alias.json').read_text())
 hist = defaultdict(lambda: defaultdict(float))
@@ -63,6 +64,12 @@ for filename, data in [('ape_region_sector.csv', detail), ('mape_16_regiones.csv
         writer = csv.DictWriter(f, fieldnames=list(data[0]))
         writer.writeheader()
         writer.writerows(data)
+for filename, data in [('ape_region_sector_bre_2024.csv', detail), ('mape_regional_bre_2024.csv', summary)]:
+    selected = [row for row in data if row['año'] == 2024]
+    with (OUT / filename).open('w', encoding='utf-8-sig', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=list(selected[0]))
+        writer.writeheader()
+        writer.writerows(selected)
 lines = ['# APE anual y MAPE entre regiones', '',
          'Fuente: GeoPackage regional de resultados 2024–2025 y data/raw/wp2_elec_input_sector_shares_raw.csv.',
          'Unidades: GWh. Cruce mediante data/raw/reg_alias.json.', '',

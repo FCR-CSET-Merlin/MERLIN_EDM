@@ -91,13 +91,13 @@ La revisión corresponde a los artefactos disponibles y al código del flujo; no
 
 - [APE por región y sector, con predicciones y referencias en GWh](ape_region_sector_bre_2024.csv).
 - [MAPE entre las 16 regiones](mape_regional_bre_2024.csv).
-- [Script del cálculo original](../analisis/ape_bre/calcular.py). Este script genera ambos años; el presente reporte selecciona exclusivamente 2024.
-- [Descripción de prototipo_3](../prototipo_3/README.md).
-- [Flujo de reconstrucción regional](../prototipo_3/rec_2024_2025/capa_regional.ipynb).
-- [Descripción de los artefactos de salida](../prototipo_3/rec_2024_2025/README.md).
+- [Script del cálculo original](../../../analisis/ape_bre/calcular.py). Este script genera ambos años; el presente reporte selecciona exclusivamente 2024.
+- [Descripción de prototipo_3](../../../prototipo_3/README.md).
+- [Flujo de reconstrucción regional](../../../prototipo_3/rec_2024_2025/capa_regional.ipynb).
+- [Descripción de los artefactos de salida](../../../prototipo_3/rec_2024_2025/README.md).
 
 Fuentes de datos locales:
 
-- [GeoPackage regional](../../datos_modelos_MERLIN_EDM_prot_3/data/rec_2024_2025/results/capas_regionales/wp2_output_demanda_electrica_regional.gpkg).
-- [BRE disponible](../../datos_modelos_MERLIN_EDM_prot_3/data/raw/wp2_elec_input_sector_shares_raw.csv).
-- [Alias regionales](../../datos_modelos_MERLIN_EDM_prot_3/data/raw/reg_alias.json).
+- [GeoPackage regional](../../../../datos_modelos_MERLIN_EDM_prot_3/data/rec_2024_2025/results/capas_regionales/wp2_output_demanda_electrica_regional.gpkg).
+- [BRE disponible](../../../../datos_modelos_MERLIN_EDM_prot_3/data/raw/wp2_elec_input_sector_shares_raw.csv).
+- [Alias regionales](../../../../datos_modelos_MERLIN_EDM_prot_3/data/raw/reg_alias.json).
