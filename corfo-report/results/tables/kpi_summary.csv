@@ -1,0 +1,2 @@
+﻿id_evidencia,compromiso,indicador,pais,energia,año,sectores_evaluados,sectores_bajo_umbral,porcentaje,mayoria_numerica,cumplimiento_global,evidencia
+CORFO-MERLIN-EDM-CHILE-BRE2024,HC2,2 - precisión,Chile,Electricidad,2024,5,4,80.0,True,No acreditado por este paquete,../../validation/kpi_validation.csv

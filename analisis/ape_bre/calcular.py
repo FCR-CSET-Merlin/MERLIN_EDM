@@ -61,13 +61,13 @@ for year in [2024, 2025]:
                             regiones=16, regiones_APE_definido=len(valid), tipo_referencia=selected[0]['tipo_referencia']))
 for filename, data in [('ape_region_sector.csv', detail), ('mape_16_regiones.csv', summary)]:
     with (OUT / filename).open('w', encoding='utf-8-sig', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=list(data[0]))
+        writer = csv.DictWriter(f, fieldnames=list(data[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(data)
 for filename, data in [('ape_region_sector_bre_2024.csv', detail), ('mape_regional_bre_2024.csv', summary)]:
     selected = [row for row in data if row['año'] == 2024]
     with (OUT / filename).open('w', encoding='utf-8-sig', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=list(selected[0]))
+        writer = csv.DictWriter(f, fieldnames=list(selected[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(selected)
 lines = ['# APE anual y MAPE entre regiones', '',

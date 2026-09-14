@@ -83,7 +83,7 @@ En Público destaca la Región Metropolitana con **20,92 %**. En Comercial, Anto
 
 El notebook de reconstrucción conserva los consumos del BRE cuando el año ya está disponible y extrapola los años faltantes. Para 2024, el CSV contiene datos del mismo año. El flujo utiliza los consumos para calcular participaciones y parámetros como `mu_total`, que intervienen al devolver las predicciones a unidades físicas. Por ello, la cercanía al BRE debe interpretarse como consistencia con una referencia empleada en el proceso de generación.
 
-La agregación anual permite compensaciones entre errores horarios positivos y negativos. Estos resultados no permiten inferir precisión en puntas, estacionalidad, forma horaria o generalización a años no utilizados. Tampoco establecen un umbral de desempeño aceptable: no se definió uno para este reporte.
+La agregación anual permite compensaciones entre errores horarios positivos y negativos. Estos resultados no permiten inferir precisión en puntas, estacionalidad, forma horaria o generalización a años no utilizados. La evaluación respecto al umbral HC2 se documenta en la sección final; no implica aceptación formal de esta métrica como validación contractual.
 
 La revisión corresponde a los artefactos disponibles y al código del flujo; no se reentrenó ni se volvió a ejecutar la inferencia. La correspondencia exacta entre la versión del código y la ejecución que generó los archivos no se verificó mediante un registro de ejecución.
 
@@ -101,3 +101,7 @@ Fuentes de datos locales:
 - [GeoPackage regional](../../../../datos_modelos_MERLIN_EDM_prot_3/data/rec_2024_2025/results/capas_regionales/wp2_output_demanda_electrica_regional.gpkg).
 - [BRE disponible](../../../../datos_modelos_MERLIN_EDM_prot_3/data/raw/wp2_elec_input_sector_shares_raw.csv).
 - [Alias regionales](../../../../datos_modelos_MERLIN_EDM_prot_3/data/raw/reg_alias.json).
+
+## Evidencia del KPI comprometido
+
+Para HC2-2, cuatro de los cinco sectores eléctricos evaluados en Chile 2024 presentan MAPE < 35 % (80 %). Transporte no cumple: 35,02915 %. Esta condición numérica local no acredita HC2 global. El total no se cuenta como sector adicional. Véanse la [evaluación explícita del umbral](../cumplimiento_kpi.md), la [ficha de evidencia](../ficha_evidencia_edm_2024.md) y el [manifiesto de reproducción](../manifiesto_edm_2024.json).

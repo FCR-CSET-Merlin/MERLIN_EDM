@@ -1,0 +1,69 @@
+{
+  "id_evidencia": "CORFO-MERLIN-EDM-CHILE-BRE2024",
+  "generado_utc": "2026-09-14T16:05:59.003764+00:00",
+  "commit_base": "2a35b6a0d6bc0265fc2795e2acf7fd2fb9a26680",
+  "nota_version": "Commit base del cálculo; los hashes identifican los scripts ejecutados. No es el commit del entrenamiento ni de la inferencia originales.",
+  "fuente_compromiso": "https://github.com/FCR-CSET-Merlin/merlin-index/blob/a9b855f60c4ad207d7c2544a07e4f43d25356209/05-roadmap/01-antecedentes/Resultados_Excel_CORFO.md",
+  "comando": "python analisis/ape_bre/reportar_kpi.py",
+  "inputs": [
+    {
+      "path": "/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3/data/raw/wp2_elec_input_sector_shares_raw.csv",
+      "sha256": "5363b201cf20cc0e48634b0ab64a9ae616d3ae72b169b237d241164a55000ebd",
+      "bytes": 19960
+    },
+    {
+      "path": "/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3/data/raw/reg_alias.json",
+      "sha256": "bb739fba0d3ec2c980cca49e1306892bbc38d4992fe901a06e485e5908ef4292",
+      "bytes": 514
+    },
+    {
+      "path": "/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3/data/rec_2024_2025/results/capas_regionales/wp2_output_demanda_electrica_regional.gpkg",
+      "sha256": "0f08e92f9213af6cbfcb5b8b16474211c57fc9fe142b305223dcc5b35e9d3063",
+      "bytes": 229793792
+    }
+  ],
+  "scripts": [
+    {
+      "path": "analisis/ape_bre/reportar_kpi.py",
+      "sha256": "a79c2a94b55df3d56b2fe61c53015edc7c50c2d8bd8285ef05a13e30d25b9213"
+    },
+    {
+      "path": "analisis/ape_bre/calcular.py",
+      "sha256": "68855ee41cb96190befb5ce1ea8079ba8915ca7b3a5cebae283c53796ebb6dda"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "corfo-report/validation/ape_bre/ape_region_sector.csv",
+      "sha256": "a07f05fc85bd6938cb6add7c1ed5413f950a1ba289ab00b116d703cf76e76ec6"
+    },
+    {
+      "path": "corfo-report/validation/ape_bre/mape_16_regiones.csv",
+      "sha256": "ffdec940d1a681a188ad898d344a76bb8e99f890e6ac4d229ede315601153168"
+    },
+    {
+      "path": "corfo-report/validation/ape_bre/mape_regional_bre_2024.csv",
+      "sha256": "d9d4a9fb8b8b76060be62c5c35fbe075b409ec051c54034e2ee159654f0bbbe1"
+    },
+    {
+      "path": "corfo-report/validation/ape_bre/ape_region_sector_bre_2024.csv",
+      "sha256": "eb65699b499c3e338fb391fb739b3bc6b1848b6292f90db60aefed68bf91de68"
+    },
+    {
+      "path": "corfo-report/validation/kpi_validation.csv",
+      "sha256": "49286f651e9fd46d7ed5f3f38cac46dbfbb31d45051ff9aebdefca072c22a075"
+    },
+    {
+      "path": "corfo-report/results/tables/kpi_summary.csv",
+      "sha256": "c7b663af3dfa96b440997e0952e6d97470853d0ec0c825a023b903e4c365e0f6"
+    }
+  ],
+  "verificaciones": [
+    "96 pares región-categoría únicos en 2024",
+    "16 regiones por sector",
+    "Referencias positivas",
+    "APE recalculados",
+    "MAPE media sin ponderación",
+    "Umbral estricto sin redondeo; total excluido del conteo"
+  ]
+}
