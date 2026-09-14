@@ -1,0 +1,3570 @@
+{
+  "data/interim/temperatura_regional_horaria.parquet": {
+    "rows": 1312512,
+    "columns": [
+      "fecha_hora",
+      "region",
+      "temperatura"
+    ],
+    "years": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "date_min": "2017-01-01 00:00:00",
+    "date_max": "2026-05-11 23:00:00",
+    "temperature": {
+      "min": -11.0614013671875,
+      "max": 38.097259521484375,
+      "nulls": 0
+    },
+    "year_counts": {
+      "2017": 140160,
+      "2018": 140160,
+      "2019": 140160,
+      "2020": 140544,
+      "2021": 140160,
+      "2022": 140160,
+      "2023": 140160,
+      "2024": 140544,
+      "2025": 140160,
+      "2026": 50304
+    },
+    "regions_per_year": {
+      "2017": 16,
+      "2018": 16,
+      "2019": 16,
+      "2020": 16,
+      "2021": 16,
+      "2022": 16,
+      "2023": 16,
+      "2024": 16,
+      "2025": 16,
+      "2026": 16
+    },
+    "duplicate_region_time": 0,
+    "group_counts": [
+      {
+        "año": 2017,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2020,
+        "region": "ANTOFAGASTA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "ATACAMA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "BIOBÍO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "COQUIMBO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LA ARAUCANÍA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LOS LAGOS",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LOS RÍOS",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "MAULE",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "TARAPACÁ",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "VALPARAÍSO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "ÑUBLE",
+        "rows": 8784
+      },
+      {
+        "año": 2021,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2024,
+        "region": "ANTOFAGASTA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "ATACAMA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "BIOBÍO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "COQUIMBO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "LA ARAUCANÍA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "LOS LAGOS",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "LOS RÍOS",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "MAULE",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "TARAPACÁ",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "VALPARAÍSO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "ÑUBLE",
+        "rows": 8784
+      },
+      {
+        "año": 2025,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2026,
+        "region": "ANTOFAGASTA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "ATACAMA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "BIOBÍO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "COQUIMBO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "LA ARAUCANÍA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "LOS LAGOS",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "LOS RÍOS",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "MAULE",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "TARAPACÁ",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "VALPARAÍSO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "ÑUBLE",
+        "rows": 3144
+      }
+    ]
+  },
+  "data/interim/temperatura_regional_lagged.parquet": {
+    "rows": 1312400,
+    "columns": [
+      "fecha_hora",
+      "region",
+      "temperatura",
+      "temp_t - 1",
+      "temp_t - 2",
+      "temp_t - 3",
+      "temp_t - 4",
+      "temp_t - 5",
+      "temp_t - 6",
+      "temp_t - 7"
+    ],
+    "years": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "date_min": "2017-01-01 07:00:00",
+    "date_max": "2026-05-11 23:00:00",
+    "temperature": {
+      "min": -11.0614013671875,
+      "max": 38.097259521484375,
+      "nulls": 0
+    },
+    "year_counts": {
+      "2017": 140048,
+      "2018": 140160,
+      "2019": 140160,
+      "2020": 140544,
+      "2021": 140160,
+      "2022": 140160,
+      "2023": 140160,
+      "2024": 140544,
+      "2025": 140160,
+      "2026": 50304
+    },
+    "regions_per_year": {
+      "2017": 16,
+      "2018": 16,
+      "2019": 16,
+      "2020": 16,
+      "2021": 16,
+      "2022": 16,
+      "2023": 16,
+      "2024": 16,
+      "2025": 16,
+      "2026": 16
+    },
+    "duplicate_region_time": 0,
+    "group_counts": [
+      {
+        "año": 2017,
+        "region": "ANTOFAGASTA",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "ATACAMA",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "BIOBÍO",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "COQUIMBO",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "LA ARAUCANÍA",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "LOS LAGOS",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "LOS RÍOS",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "MAULE",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "TARAPACÁ",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "VALPARAÍSO",
+        "rows": 8753
+      },
+      {
+        "año": 2017,
+        "region": "ÑUBLE",
+        "rows": 8753
+      },
+      {
+        "año": 2018,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2020,
+        "region": "ANTOFAGASTA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "ATACAMA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "BIOBÍO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "COQUIMBO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LA ARAUCANÍA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LOS LAGOS",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LOS RÍOS",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "MAULE",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "TARAPACÁ",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "VALPARAÍSO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "ÑUBLE",
+        "rows": 8784
+      },
+      {
+        "año": 2021,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2024,
+        "region": "ANTOFAGASTA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "ATACAMA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "BIOBÍO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "COQUIMBO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "LA ARAUCANÍA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "LOS LAGOS",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "LOS RÍOS",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "MAULE",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "TARAPACÁ",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "VALPARAÍSO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "ÑUBLE",
+        "rows": 8784
+      },
+      {
+        "año": 2025,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2026,
+        "region": "ANTOFAGASTA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "ATACAMA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "BIOBÍO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "COQUIMBO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "LA ARAUCANÍA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "LOS LAGOS",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "LOS RÍOS",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "MAULE",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "TARAPACÁ",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "VALPARAÍSO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "ÑUBLE",
+        "rows": 3144
+      }
+    ]
+  },
+  "data/interim/demanda_regional_horaria.parquet": {
+    "rows": 650513,
+    "columns": [
+      "fecha_hora",
+      "region",
+      "demanda_mwh"
+    ],
+    "years": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "date_min": "2018-08-01 00:00:00",
+    "date_max": "2023-12-31 23:00:00",
+    "year_counts": {
+      "2018": 51394,
+      "2019": 122640,
+      "2020": 122976,
+      "2021": 122640,
+      "2022": 108236,
+      "2023": 122627
+    },
+    "regions_per_year": {
+      "2018": 14,
+      "2019": 14,
+      "2020": 14,
+      "2021": 14,
+      "2022": 14,
+      "2023": 14
+    },
+    "duplicate_region_time": 0,
+    "group_counts": [
+      {
+        "año": 2018,
+        "region": "ANTOFAGASTA",
+        "rows": 3671
+      },
+      {
+        "año": 2018,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 3671
+      },
+      {
+        "año": 2018,
+        "region": "ATACAMA",
+        "rows": 3671
+      },
+      {
+        "año": 2018,
+        "region": "BIOBÍO",
+        "rows": 3671
+      },
+      {
+        "año": 2018,
+        "region": "COQUIMBO",
+        "rows": 3671
+      },
+      {
+        "año": 2018,
+        "region": "LA ARAUCANÍA",
+        "rows": 3671
+      },
+      {
+        "año": 2018,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 3671
+      },
+      {
+        "año": 2018,
+        "region": "LOS LAGOS",
+        "rows": 3671
+      },
+      {
+        "año": 2018,
+        "region": "LOS RÍOS",
+        "rows": 3671
+      },
+      {
+        "año": 2018,
+        "region": "MAULE",
+        "rows": 3671
+      },
+      {
+        "año": 2018,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 3671
+      },
+      {
+        "año": 2018,
+        "region": "TARAPACÁ",
+        "rows": 3671
+      },
+      {
+        "año": 2018,
+        "region": "VALPARAÍSO",
+        "rows": 3671
+      },
+      {
+        "año": 2018,
+        "region": "ÑUBLE",
+        "rows": 3671
+      },
+      {
+        "año": 2019,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2020,
+        "region": "ANTOFAGASTA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "ATACAMA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "BIOBÍO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "COQUIMBO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LA ARAUCANÍA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LOS LAGOS",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LOS RÍOS",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "MAULE",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "TARAPACÁ",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "VALPARAÍSO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "ÑUBLE",
+        "rows": 8784
+      },
+      {
+        "año": 2021,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "ANTOFAGASTA",
+        "rows": 7320
+      },
+      {
+        "año": 2022,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 7320
+      },
+      {
+        "año": 2022,
+        "region": "ATACAMA",
+        "rows": 7320
+      },
+      {
+        "año": 2022,
+        "region": "BIOBÍO",
+        "rows": 8040
+      },
+      {
+        "año": 2022,
+        "region": "COQUIMBO",
+        "rows": 7320
+      },
+      {
+        "año": 2022,
+        "region": "LA ARAUCANÍA",
+        "rows": 8040
+      },
+      {
+        "año": 2022,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 7320
+      },
+      {
+        "año": 2022,
+        "region": "LOS LAGOS",
+        "rows": 8040
+      },
+      {
+        "año": 2022,
+        "region": "LOS RÍOS",
+        "rows": 8036
+      },
+      {
+        "año": 2022,
+        "region": "MAULE",
+        "rows": 8040
+      },
+      {
+        "año": 2022,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8040
+      },
+      {
+        "año": 2022,
+        "region": "TARAPACÁ",
+        "rows": 7320
+      },
+      {
+        "año": 2022,
+        "region": "VALPARAÍSO",
+        "rows": 8040
+      },
+      {
+        "año": 2022,
+        "region": "ÑUBLE",
+        "rows": 8040
+      },
+      {
+        "año": 2023,
+        "region": "ANTOFAGASTA",
+        "rows": 8759
+      },
+      {
+        "año": 2023,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8759
+      },
+      {
+        "año": 2023,
+        "region": "ATACAMA",
+        "rows": 8759
+      },
+      {
+        "año": 2023,
+        "region": "BIOBÍO",
+        "rows": 8759
+      },
+      {
+        "año": 2023,
+        "region": "COQUIMBO",
+        "rows": 8759
+      },
+      {
+        "año": 2023,
+        "region": "LA ARAUCANÍA",
+        "rows": 8759
+      },
+      {
+        "año": 2023,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8759
+      },
+      {
+        "año": 2023,
+        "region": "LOS LAGOS",
+        "rows": 8759
+      },
+      {
+        "año": 2023,
+        "region": "LOS RÍOS",
+        "rows": 8759
+      },
+      {
+        "año": 2023,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8759
+      },
+      {
+        "año": 2023,
+        "region": "TARAPACÁ",
+        "rows": 8759
+      },
+      {
+        "año": 2023,
+        "region": "VALPARAÍSO",
+        "rows": 8759
+      },
+      {
+        "año": 2023,
+        "region": "ÑUBLE",
+        "rows": 8759
+      }
+    ]
+  },
+  "data/interim/sector_shares_regional.parquet": {
+    "rows": 1312512,
+    "columns": [
+      "fecha_hora",
+      "region",
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "doy_sin",
+      "doy_cos",
+      "is_working_day",
+      "is_holiday",
+      "is_weekend",
+      "region_bne",
+      "region_share",
+      "share_I",
+      "share_R",
+      "share_C",
+      "share_P",
+      "share_T"
+    ],
+    "years": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "date_min": "2017-01-01 00:00:00",
+    "date_max": "2026-05-11 23:00:00",
+    "year_counts": {
+      "2017": 140160,
+      "2018": 140160,
+      "2019": 140160,
+      "2020": 140544,
+      "2021": 140160,
+      "2022": 140160,
+      "2023": 140160,
+      "2024": 140544,
+      "2025": 140160,
+      "2026": 50304
+    },
+    "regions_per_year": {
+      "2017": 16,
+      "2018": 16,
+      "2019": 16,
+      "2020": 16,
+      "2021": 16,
+      "2022": 16,
+      "2023": 16,
+      "2024": 16,
+      "2025": 16,
+      "2026": 16
+    },
+    "duplicate_region_time": 0,
+    "group_counts": [
+      {
+        "año": 2017,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2017,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2018,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2019,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2020,
+        "region": "ANTOFAGASTA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "ATACAMA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "BIOBÍO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "COQUIMBO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LA ARAUCANÍA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LOS LAGOS",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "LOS RÍOS",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "MAULE",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "TARAPACÁ",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "VALPARAÍSO",
+        "rows": 8784
+      },
+      {
+        "año": 2020,
+        "region": "ÑUBLE",
+        "rows": 8784
+      },
+      {
+        "año": 2021,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2021,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2022,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2023,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2024,
+        "region": "ANTOFAGASTA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "ATACAMA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "BIOBÍO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "COQUIMBO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "LA ARAUCANÍA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "LOS LAGOS",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "LOS RÍOS",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "MAULE",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "TARAPACÁ",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "VALPARAÍSO",
+        "rows": 8784
+      },
+      {
+        "año": 2024,
+        "region": "ÑUBLE",
+        "rows": 8784
+      },
+      {
+        "año": 2025,
+        "region": "ANTOFAGASTA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "ATACAMA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "BIOBÍO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "COQUIMBO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "LA ARAUCANÍA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "LOS LAGOS",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "LOS RÍOS",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "MAULE",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "TARAPACÁ",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "VALPARAÍSO",
+        "rows": 8760
+      },
+      {
+        "año": 2025,
+        "region": "ÑUBLE",
+        "rows": 8760
+      },
+      {
+        "año": 2026,
+        "region": "ANTOFAGASTA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "ARICA Y PARINACOTA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "ATACAMA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "BIOBÍO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "COQUIMBO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "LA ARAUCANÍA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "LOS LAGOS",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "LOS RÍOS",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "MAGALLANES Y DE LA ANTÁRTICA CHILENA",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "MAULE",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "METROPOLITANA DE SANTIAGO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "TARAPACÁ",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "VALPARAÍSO",
+        "rows": 3144
+      },
+      {
+        "año": 2026,
+        "region": "ÑUBLE",
+        "rows": 3144
+      }
+    ]
+  },
+  "data/interim/shares_comunales.parquet": {
+    "rows": 10300,
+    "columns": [
+      "año_ms",
+      "region",
+      "consumo_R_MWh",
+      "consumo_C_MWh",
+      "consumo_P_MWh",
+      "consumo_I_MWh",
+      "consumo_T_MWh",
+      "consumo_total_mes_MWh",
+      "año",
+      "comuna"
+    ],
+    "years": [
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "date_min": "2018-01-01 00:00:00",
+    "date_max": "2021-12-01 00:00:00",
+    "year_counts": {
+      "2018": 2603,
+      "2019": 2616,
+      "2020": 2544,
+      "2021": 2537
+    },
+    "regions_per_year": {
+      "2018": 14,
+      "2019": 14,
+      "2020": 14,
+      "2021": 14
+    },
+    "communes_per_year": {
+      "2018": 212,
+      "2019": 212,
+      "2020": 212,
+      "2021": 212
+    }
+  },
+  "data/processed/ds_comunal/train_metadata_global.parquet": {
+    "rows": 2059220,
+    "columns": [
+      "fecha_hora",
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "doy_sin",
+      "doy_cos",
+      "is_working_day",
+      "is_holiday",
+      "is_weekend",
+      "region_bne",
+      "region_comuna_share",
+      "share_I",
+      "share_R",
+      "share_C",
+      "share_P",
+      "share_T",
+      "demanda_mwh",
+      "año",
+      "mu_total",
+      "sigma_total",
+      "is_comuna",
+      "temperatura",
+      "temp_t - 1",
+      "temp_t - 2",
+      "temp_t - 3",
+      "temp_t - 4",
+      "temp_t - 5",
+      "temp_t - 6",
+      "temp_t - 7",
+      "region_comuna",
+      "target_scaled",
+      "mes"
+    ],
+    "years": [
+      2018,
+      2019
+    ],
+    "date_min": "2018-08-01 00:00:00",
+    "date_max": "2019-12-31 23:00:00",
+    "split_counts": [
+      {
+        "año": 2018,
+        "is_comuna": 0.0,
+        "rows": 51394
+      },
+      {
+        "año": 2018,
+        "is_comuna": 1.0,
+        "rows": 558650
+      },
+      {
+        "año": 2019,
+        "is_comuna": 0.0,
+        "rows": 122640
+      },
+      {
+        "año": 2019,
+        "is_comuna": 1.0,
+        "rows": 1326536
+      }
+    ],
+    "temperature": {
+      "min": 0.0,
+      "max": 1.0,
+      "nulls": 0
+    }
+  },
+  "data/processed/ds_comunal/val_metadata_global.parquet": {
+    "rows": 1537361,
+    "columns": [
+      "fecha_hora",
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "doy_sin",
+      "doy_cos",
+      "is_working_day",
+      "is_holiday",
+      "is_weekend",
+      "region_bne",
+      "region_comuna_share",
+      "share_I",
+      "share_R",
+      "share_C",
+      "share_P",
+      "share_T",
+      "demanda_mwh",
+      "año",
+      "mu_total",
+      "sigma_total",
+      "is_comuna",
+      "temperatura",
+      "temp_t - 1",
+      "temp_t - 2",
+      "temp_t - 3",
+      "temp_t - 4",
+      "temp_t - 5",
+      "temp_t - 6",
+      "temp_t - 7",
+      "region_comuna",
+      "target_scaled",
+      "mes"
+    ],
+    "years": [
+      2020
+    ],
+    "date_min": "2020-01-01 00:00:00",
+    "date_max": "2020-12-31 23:00:00",
+    "split_counts": [
+      {
+        "año": 2020,
+        "is_comuna": 0.0,
+        "rows": 122976
+      },
+      {
+        "año": 2020,
+        "is_comuna": 1.0,
+        "rows": 1414385
+      }
+    ],
+    "temperature": {
+      "min": -0.07673622173171352,
+      "max": 0.9500613582651969,
+      "nulls": 0
+    }
+  },
+  "data/processed/ds_comunal/test_metadata_global.parquet": {
+    "rows": 1539786,
+    "columns": [
+      "fecha_hora",
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "doy_sin",
+      "doy_cos",
+      "is_working_day",
+      "is_holiday",
+      "is_weekend",
+      "region_bne",
+      "region_comuna_share",
+      "share_I",
+      "share_R",
+      "share_C",
+      "share_P",
+      "share_T",
+      "demanda_mwh",
+      "año",
+      "mu_total",
+      "sigma_total",
+      "is_comuna",
+      "temperatura",
+      "temp_t - 1",
+      "temp_t - 2",
+      "temp_t - 3",
+      "temp_t - 4",
+      "temp_t - 5",
+      "temp_t - 6",
+      "temp_t - 7",
+      "region_comuna",
+      "target_scaled",
+      "mes"
+    ],
+    "years": [
+      2021
+    ],
+    "date_min": "2021-01-01 00:00:00",
+    "date_max": "2021-12-31 23:00:00",
+    "split_counts": [
+      {
+        "año": 2021,
+        "is_comuna": 0.0,
+        "rows": 122640
+      },
+      {
+        "año": 2021,
+        "is_comuna": 1.0,
+        "rows": 1417146
+      }
+    ],
+    "temperature": {
+      "min": -0.10091922652740476,
+      "max": 0.9565485564211758,
+      "nulls": 0
+    }
+  },
+  "data/processed/test_md_caso_1.parquet": {
+    "rows": 230863,
+    "columns": [
+      "fecha_hora",
+      "region",
+      "temperatura",
+      "temp_t - 1",
+      "temp_t - 2",
+      "temp_t - 3",
+      "temp_t - 4",
+      "temp_t - 5",
+      "temp_t - 6",
+      "temp_t - 7",
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "doy_sin",
+      "doy_cos",
+      "is_working_day",
+      "is_holiday",
+      "is_weekend",
+      "region_bne",
+      "region_share",
+      "share_I",
+      "share_R",
+      "share_C",
+      "share_P",
+      "share_T",
+      "demanda_mwh",
+      "año",
+      "mu_total",
+      "sigma_total"
+    ],
+    "years": [
+      2022,
+      2023
+    ],
+    "date_min": "2022-01-01 00:00:00",
+    "date_max": "2023-12-31 23:00:00",
+    "temperature": {
+      "min": -0.0018573030829429626,
+      "max": 1.0160870552062988,
+      "nulls": 0
+    }
+  },
+  "data/processed/test_md_caso_3.parquet": {
+    "rows": 122640,
+    "columns": [
+      "fecha_hora",
+      "region",
+      "temperatura",
+      "temp_t - 1",
+      "temp_t - 2",
+      "temp_t - 3",
+      "temp_t - 4",
+      "temp_t - 5",
+      "temp_t - 6",
+      "temp_t - 7",
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "doy_sin",
+      "doy_cos",
+      "is_working_day",
+      "is_holiday",
+      "is_weekend",
+      "region_bne",
+      "region_share",
+      "share_I",
+      "share_R",
+      "share_C",
+      "share_P",
+      "share_T",
+      "demanda_mwh",
+      "año",
+      "mu_total",
+      "sigma_total"
+    ],
+    "years": [
+      2021
+    ],
+    "date_min": "2021-01-01 00:00:00",
+    "date_max": "2021-12-31 23:00:00",
+    "temperature": {
+      "min": -0.06527934968471527,
+      "max": 0.9455335140228271,
+      "nulls": 0
+    }
+  },
+  "BRE": [
+    {
+      "year": 2018,
+      "regions": 16,
+      "rows": 75,
+      "missing": [
+        [
+          "AP",
+          "Transporte"
+        ],
+        [
+          "AT",
+          "Transporte"
+        ],
+        [
+          "CO",
+          "Transporte"
+        ],
+        [
+          "MA",
+          "Transporte"
+        ],
+        [
+          "TA",
+          "Transporte"
+        ]
+      ],
+      "zero": [],
+      "negative": []
+    },
+    {
+      "year": 2019,
+      "regions": 16,
+      "rows": 75,
+      "missing": [
+        [
+          "AI",
+          "Transporte"
+        ],
+        [
+          "AP",
+          "Transporte"
+        ],
+        [
+          "AT",
+          "Transporte"
+        ],
+        [
+          "MA",
+          "Transporte"
+        ],
+        [
+          "TA",
+          "Transporte"
+        ]
+      ],
+      "zero": [],
+      "negative": []
+    },
+    {
+      "year": 2020,
+      "regions": 16,
+      "rows": 76,
+      "missing": [
+        [
+          "AP",
+          "Transporte"
+        ],
+        [
+          "AT",
+          "Transporte"
+        ],
+        [
+          "MA",
+          "Transporte"
+        ],
+        [
+          "TA",
+          "Transporte"
+        ]
+      ],
+      "zero": [],
+      "negative": []
+    },
+    {
+      "year": 2021,
+      "regions": 16,
+      "rows": 75,
+      "missing": [
+        [
+          "AI",
+          "Transporte"
+        ],
+        [
+          "AP",
+          "Transporte"
+        ],
+        [
+          "AT",
+          "Transporte"
+        ],
+        [
+          "MA",
+          "Transporte"
+        ],
+        [
+          "TA",
+          "Transporte"
+        ]
+      ],
+      "zero": [],
+      "negative": []
+    },
+    {
+      "year": 2022,
+      "regions": 16,
+      "rows": 78,
+      "missing": [
+        [
+          "AI",
+          "Transporte"
+        ],
+        [
+          "LR",
+          "Transporte"
+        ]
+      ],
+      "zero": [],
+      "negative": []
+    },
+    {
+      "year": 2023,
+      "regions": 16,
+      "rows": 80,
+      "missing": [],
+      "zero": [],
+      "negative": []
+    },
+    {
+      "year": 2024,
+      "regions": 16,
+      "rows": 80,
+      "missing": [],
+      "zero": [],
+      "negative": []
+    }
+  ],
+  "features": [
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "doy_sin",
+    "doy_cos",
+    "is_working_day",
+    "is_holiday",
+    "is_weekend",
+    "region_comuna_share",
+    "share_I",
+    "share_R",
+    "share_C",
+    "share_P",
+    "share_T",
+    "is_comuna",
+    "temperatura",
+    "temp_t - 1",
+    "temp_t - 2",
+    "temp_t - 3",
+    "temp_t - 4",
+    "temp_t - 5",
+    "temp_t - 6",
+    "temp_t - 7"
+  ],
+  "model_metadata": {
+    "keras_version": "3.14.1",
+    "date_saved": "2026-07-10@23:55:09"
+  },
+  "input_layers": [
+    {
+      "batch_shape": [
+        null,
+        24
+      ],
+      "dtype": "float32",
+      "sparse": false,
+      "ragged": false,
+      "name": "input_layer",
+      "optional": false
+    }
+  ],
+  "_revision": {
+    "fecha": "2026-09-14",
+    "commit_base": "603de6f",
+    "metodo": "Lectura selectiva de Parquet con pandas/PyArrow; inventario BRE; metadatos JSON del archivo Keras. Sin inferencia.",
+    "verificacion_adicional_clima": {
+      "archivo": "data/interim/temperatura_regional_lagged.parquet",
+      "discontinuidades_horarias_por_region": 0,
+      "nulos_todas_columnas": 0,
+      "anios_completos_verificados": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ]
+    },
+    "limitacion": "Las particiones presentes no certifican qué archivos produjeron los pesos. Fechas sin zona explícita."
+  }
+}

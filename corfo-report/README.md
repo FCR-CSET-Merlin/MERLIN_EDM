@@ -20,6 +20,10 @@ MERLIN EDM aporta evidencia de demanda **eléctrica de Chile, año 2024, 16 regi
 | Trazabilidad y alcance | [Ficha](validation/ficha_evidencia_edm_2024.md), [manifiesto](validation/manifiesto_edm_2024.json) | Entradas identificadas por SHA-256 | Distingue generación de métricas de inferencia original |
 | Cumplimiento del estándar | [Auditoría](validation/auditoria_estandar.md) | [Estándar CORFO](https://github.com/FCR-CSET-Merlin/merlin-index/blob/a9b855f60c4ad207d7c2544a07e4f43d25356209/08-reportaje-corfo/estandar-estructura-corfo-report.md) | Requisitos satisfechos, excepciones y brechas |
 
+## Extensión histórica planificada
+
+Se inspeccionaron los insumos y las particiones para reconstruir años anteriores a 2024. El [diagnóstico y guía paso a paso](validation/guia_validacion_historica.md) recomienda un piloto regional 2023 y documenta los faltantes BRE 2018–2022. El [inventario](validation/inventario_historico.json) respalda la cobertura encontrada. Esta revisión no ejecuta inferencia ni añade métricas históricas al KPI.
+
 ## Reproducibility
 
 Desde la raíz, con Python 3 y bibliotecas estándar:
