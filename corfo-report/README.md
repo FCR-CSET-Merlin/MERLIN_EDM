@@ -24,6 +24,8 @@ MERLIN EDM aporta evidencia de demanda **eléctrica de Chile, año 2024, 16 regi
 
 Se inspeccionaron los insumos y las particiones para reconstruir años anteriores a 2024. El [diagnóstico y guía paso a paso](validation/guia_validacion_historica.md) recomienda un piloto regional 2023 y documenta los faltantes BRE 2018–2022. El [inventario](validation/inventario_historico.json) respalda la cobertura encontrada. Esta revisión no ejecuta inferencia ni añade métricas históricas al KPI.
 
+El piloto regional 2023 ya fue ejecutado en la rama `feature/validacion-bre-2023`. Sus tablas, figuras y manifiesto están en [validation/bre_2023](validation/bre_2023/). El caso usa el modelo global congelado y el BRE 2023 para construir shares y parámetros de escalamiento; por ello reporta consistencia anual con la referencia de entrada y no una validación independiente. El MAPE total es 0,96284 % y los cinco sectores quedan bajo 35 %; esta cifra no acredita por sí sola el HC2 global.
+
 ## Reproducibility
 
 Desde la raíz, con Python 3 y bibliotecas estándar:

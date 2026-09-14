@@ -1,0 +1,179 @@
+{
+  "id": "CORFO-MERLIN-EDM-CHILE-BRE2023",
+  "year": 2023,
+  "generated_utc": "2026-09-14T18:16:12.249951+00:00",
+  "commit_base": "844ddaabcf07c7a1c64342e6d34ccac273aed5f8",
+  "branch": "feature/validacion-bre-2023",
+  "note": "Hashes de scripts identifican el código ejecutado; no se infiere el commit del entrenamiento.",
+  "python": "3.11.16 (main, Sep  2 2026, 23:39:52) [GCC 15.3.0]",
+  "executable": "/home/rcl/miniforge3/envs/merlin_edm/bin/python",
+  "versions": {
+    "tensorflow": "2.21.0",
+    "keras": "3.15.1",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "pyarrow": "25.0.1",
+    "scikit-learn": "1.9.0",
+    "joblib": "1.6.0",
+    "holidays": "0.104",
+    "matplotlib": "3.11.1"
+  },
+  "args": {
+    "year": 2023,
+    "artifact_root": "/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3",
+    "report_root": "/srv/compartido/inbox/MERLIN_EDM/corfo-report",
+    "timeseries_dir": null,
+    "overwrite": false
+  },
+  "features": [
+    "hour_sin",
+    "hour_cos",
+    "dow_sin",
+    "dow_cos",
+    "doy_sin",
+    "doy_cos",
+    "is_working_day",
+    "is_holiday",
+    "is_weekend",
+    "region_comuna_share",
+    "share_I",
+    "share_R",
+    "share_C",
+    "share_P",
+    "share_T",
+    "is_comuna",
+    "temperatura",
+    "temp_t - 1",
+    "temp_t - 2",
+    "temp_t - 3",
+    "temp_t - 4",
+    "temp_t - 5",
+    "temp_t - 6",
+    "temp_t - 7"
+  ],
+  "A": 0.322549069768395,
+  "B": 0.8988,
+  "hours_per_region": 8760,
+  "hourly_rows": 140160,
+  "regions": 16,
+  "sectors": 5,
+  "input_climate_fraction_outside_0_1": 0.0,
+  "deterministic_ops": true,
+  "cpu_threads": 2,
+  "random_seed": 2023,
+  "inputs": {
+    "model": {
+      "path": "/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3/models/ds_comunal/best_merlin_mlp_global.keras",
+      "sha256": "61c7bb45c90bdca39ab7d56ad3161ab388557fd831947da2efd2916581e7e178",
+      "bytes": 631748
+    },
+    "scaler": {
+      "path": "/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3/models/scaler_temp_global.pkl",
+      "sha256": "282218d2a81fcb3c23ddc9e9126478de02cce95b1a93b0f96580765e91ce3efa",
+      "bytes": 1335
+    },
+    "columns": {
+      "path": "/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3/data/rec_2024_2025/columns.txt",
+      "sha256": "f24fd67c0aad724329c40ede177707a69e36103f6308e4498d99b77f0cd3c928",
+      "bytes": 246
+    },
+    "bre": {
+      "path": "/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3/data/raw/wp2_elec_input_sector_shares_raw.csv",
+      "sha256": "5363b201cf20cc0e48634b0ab64a9ae616d3ae72b169b237d241164a55000ebd",
+      "bytes": 19960
+    },
+    "aliases": {
+      "path": "/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3/data/raw/reg_alias.json",
+      "sha256": "bb739fba0d3ec2c980cca49e1306892bbc38d4992fe901a06e485e5908ef4292",
+      "bytes": 514
+    },
+    "climate": {
+      "path": "/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3/data/interim/temperatura_regional_lagged.parquet",
+      "sha256": "fbc31bdb82ba8d2bd4b1953f436b75dc19c0079b0b3ef8db19f7dfa9fd83d6df",
+      "bytes": 51864696
+    },
+    "raw_climate": {
+      "path": "/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3/data/interim/temperatura_regional_horaria.parquet",
+      "sha256": "608a0f330c64d6a98e365d0c7e32c3f815c2a7d61668a72226338e2dc261fccf",
+      "bytes": 7093270
+    }
+  },
+  "scripts": [
+    {
+      "path": "/srv/compartido/inbox/MERLIN_EDM/prototipo_3/src/reconstruct_regional.py",
+      "sha256": "34874c08681b78419ca1c5be835207d0f172c1c416646f4b664f8215a650069a",
+      "bytes": 20387
+    },
+    {
+      "path": "/srv/compartido/inbox/MERLIN_EDM/prototipo_3/src/forecast_edm/inference.py",
+      "sha256": "f53e4e24aa35c0ac7feeb4f2e654135afda2ff8b7bd50e04ea54d583eb2b1959",
+      "bytes": 2876
+    },
+    {
+      "path": "/srv/compartido/inbox/MERLIN_EDM/prototipo_3/src/forecast_edm/scaling_engine.py",
+      "sha256": "cac7409138c29c6f684194b37fa3e3351874ecc49e225270c4a54974930ccb7c",
+      "bytes": 3111
+    },
+    {
+      "path": "/srv/compartido/inbox/MERLIN_EDM/prototipo_3/src/forecast_edm/time_features.py",
+      "sha256": "54c36647f0e18b90fd9c0c4680b189b9397a1b8cb6d67ffbb56a3375bbaa4a4f",
+      "bytes": 2965
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/srv/compartido/inbox/MERLIN_EDM/corfo-report/validation/bre_2023/ape_region_sector.csv",
+      "sha256": "5cdd144dec9cea6a0a08913611da55a4efe11bed00b7dbb1c7caa613c38fde17",
+      "bytes": 8656
+    },
+    {
+      "path": "/srv/compartido/inbox/MERLIN_EDM/corfo-report/validation/bre_2023/mape_sectorial.csv",
+      "sha256": "cbad09bc8635ea822043bc644ae305d93a75b8859c8f9ebe0ce407808e936805",
+      "bytes": 248
+    },
+    {
+      "path": "/srv/compartido/inbox/MERLIN_EDM/corfo-report/validation/bre_2023/kpi_validation.csv",
+      "sha256": "d882b8fb54f0aab03c05a7630afb16fd63aa3f24ba437fa57860ecba7dc1ea34",
+      "bytes": 1419
+    },
+    {
+      "path": "/srv/compartido/inbox/MERLIN_EDM/corfo-report/validation/bre_2023/mape_sectorial.png",
+      "sha256": "24d10e4b64cee9c5d1559d3da44cff7b201b181c250f58d00c83af6fa1f1d83a",
+      "bytes": 54259
+    },
+    {
+      "path": "/srv/compartido/inbox/MERLIN_EDM/corfo-report/validation/bre_2023/ape_region_sector.png",
+      "sha256": "7d7dc76d81d20bfcfa597d85100764b23c8b7db5631d7bf8275b8eac49cc4508",
+      "bytes": 190955
+    },
+    {
+      "path": "/srv/compartido/inbox/MERLIN_EDM/corfo-report/validation/bre_2023/README.md",
+      "sha256": "fbaa782abeff69d3a146f13cf16ffe7c4c840a3708e4dfd28ce496a15e970f72",
+      "bytes": 4707
+    },
+    {
+      "path": "/srv/compartido/inbox/MERLIN_EDM/corfo-report/results/tables/demanda_regional_sectorial_2023.csv",
+      "sha256": "3238ed3dc3f27326c886460ca4aaa2b61caf38d0b8157b2b4094fe38aa4c21a5",
+      "bytes": 2285
+    },
+    {
+      "path": "/srv/compartido/inbox/MERLIN_EDM/corfo-report/results/figures/demanda_regional_2023.png",
+      "sha256": "35760a668e315317e3ff02e5c8ba0a92f8d6c50733f2d755437479db6ccdb773",
+      "bytes": 87580
+    },
+    {
+      "path": "/srv/compartido/inbox/MERLIN_EDM/prototipo_3/data/rec_historica/2023/demanda_regional_2023_horaria.parquet",
+      "sha256": "9457ae67b36d257340c665affe64547c10cbad959d02aa0c1c05346d48f49de8",
+      "bytes": 8613668
+    }
+  ],
+  "checks": [
+    "BRE: 80 referencias únicas positivas",
+    "Clima: 16 años-región completos",
+    "Rezagos t-1 a t-7 coinciden con historia física",
+    "24 features; scaler de 8 variables",
+    "Shares suman uno",
+    "Predicciones finitas y no negativas",
+    "96 APE; MAPE de 16 regiones; KPI estricto sin Total"
+  ]
+}
