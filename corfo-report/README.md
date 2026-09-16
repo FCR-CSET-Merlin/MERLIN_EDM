@@ -8,6 +8,10 @@ MERLIN EDM aporta evidencia de demanda **eléctrica de Chile, año 2024, 16 regi
 |---|---|---|---|---|
 | Resumen numérico HC2 Chile 2024 | [kpi_summary.csv](results/tables/kpi_summary.csv) | [reportar_kpi.py](../analisis/ape_bre/reportar_kpi.py) | MAPE de las 16 regiones y meta HC2 | Conteo de sectores bajo 35 %, excluyendo Total |
 | Reporte interpretativo 2024 | [Reporte BRE](validation/ape_bre/resultados_modelo_bre_2024.md) | Redacción revisada a partir de calcular.py | GeoPackage regional y BRE 2024 | APE, MAPE y limitaciones |
+| Totales regionales simulados 2023 | [CSV anual](results/tables/demanda_regional_sectorial_2023.csv) | [reconstruct_regional.py](../prototipo_3/src/reconstruct_regional.py) | Inferencia regional 2023 | Demanda total y RCPIT en GWh |
+| Totales regionales simulados 2024 | [CSV anual](results/tables/demanda_regional_sectorial_2024.csv) | [capa_regional.ipynb](../prototipo_3/rec_2024_2025/capa_regional.ipynb) | GeoPackage regional operativo | Demanda total y RCPIT en GWh |
+| Totales regionales simulados 2025 | [CSV anual](results/tables/demanda_regional_sectorial_2025.csv) | [capa_regional.ipynb](../prototipo_3/rec_2024_2025/capa_regional.ipynb) | GeoPackage regional operativo | Demanda total y RCPIT en GWh; referencia BRE 2025 extrapolada |
+| Series horarias de reconstrucción | [Índice de Parquet](results/timeseries/README.md) | Flujo de inferencia regional y comunal | Resultados 2023–2025 | Copias locales para auditar las agregaciones; cobertura y hashes en el manifiesto |
 
 ## Validation
 
@@ -36,13 +40,21 @@ python analisis/ape_bre/reportar_kpi.py
 
 Este comando ejecuta `calcular.py`, regenera los CSV de ambos años, los extractos 2024, el resumen de errores y la evidencia KPI (CSV, Markdown y manifiesto). Verifica fórmulas, cobertura y el umbral estricto. No ejecuta entrenamiento ni inferencia. El informe interpretativo y la ficha son documentación revisada manualmente; deben revisarse si cambian las cifras.
 
+Para regenerar las tablas anuales regionales desde la capa GeoPackage 2024–2025:
+
+```bash
+python analisis/ape_bre/exportar_resultados.py
+```
+
+La tabla 2023 fue producida por el script del piloto regional y las tablas 2024–2025 se exportaron desde el GeoPackage operativo. Las tres contienen 16 regiones y cinco sectores más la demanda total.
+
 Los archivos de entrada se leen de `/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3/data/`:
 
 - `rec_2024_2025/results/capas_regionales/wp2_output_demanda_electrica_regional.gpkg`: totales anuales modelados en GWh, procedentes de [capa_regional.ipynb](../prototipo_3/rec_2024_2025/capa_regional.ipynb).
 - `raw/wp2_elec_input_sector_shares_raw.csv`: valores sectoriales BRE; se filtra 2024 para el KPI.
 - `raw/reg_alias.json`: homologación de regiones.
 
-Las rutas están definidas en `calcular.py`. La reproducción requiere acceso a esos insumos externos; el manifiesto permite comprobar su identidad. No se distribuyen datasets pesados en Git. Los Parquet horarios y GeoPackage comunales/regionales permanecen en ese directorio externo. El procedimiento original de inferencia está descrito en [Reconstrucción 2024–2025](../prototipo_3/rec_2024_2025/README.md); su entorno ML y sus artefactos son necesarios para repetir la inferencia, no para recalcular estas métricas.
+Las rutas están definidas en `calcular.py`. La reproducción requiere acceso a esos insumos externos; el manifiesto permite comprobar su identidad. Los datasets pesados no se versionan en Git. Los Parquet horarios se copian localmente en [results/timeseries](results/timeseries/) y sus fuentes originales permanecen en el directorio externo; el índice registra tamaños y hashes. El procedimiento original de inferencia está descrito en [Reconstrucción 2024–2025](../prototipo_3/rec_2024_2025/README.md); su entorno ML y sus artefactos son necesarios para repetir la inferencia, no para recalcular estas métricas.
 
 ## Estructura y alcance documental
 
@@ -50,11 +62,14 @@ Las rutas están definidas en `calcular.py`. La reproducción requiere acceso a 
 corfo-report/
 ├── results/
 │   ├── figures/
-│   └── tables/
+│   ├── tables/
+│   └── timeseries/
 └── validation/
     ├── ape_bre/
     └── figures/
 ```
+
+Las series Parquet de 2023, 2024 y 2025 se copiaron a [results/timeseries](results/timeseries/). La copia regional 2023 corresponde al piloto de validación; las copias regional y comunal 2024–2025 corresponden a los resultados operativos existentes. No se movieron ni modificaron las fuentes originales. Por su tamaño, los Parquet están excluidos de Git; el índice y [manifest_timeseries.json](results/timeseries/manifest_timeseries.json) registran su ubicación, cobertura y hash.
 
 Las carpetas de figuras están reservadas para futuras exportaciones; no hay figuras independientes trasladadas. Las imágenes incrustadas en notebooks permanecen allí. El código se mantiene en sus directorios originales. Los resultados comparativos se consolidaron por petición expresa del usuario; `reportes/README.md` conserva una referencia a su nueva ubicación. No se incorporaron comparadores nuevos ni escenarios adicionales.
 

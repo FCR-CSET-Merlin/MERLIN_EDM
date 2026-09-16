@@ -66,4 +66,4 @@ Para repetir un caso ya existente añadir `--overwrite`. Raíces configurables m
 - [Totales simulados en GWh](../../results/tables/demanda_regional_sectorial_2023.csv).
 - [Figura de demanda simulada](../../results/figures/demanda_regional_2023.png).
 - [Manifiesto de ejecución](manifiesto.json).
-- Serie horaria pesada: `/srv/compartido/inbox/MERLIN_EDM/prototipo_3/data/rec_historica/2023/demanda_regional_2023_horaria.parquet` (fuera del control de Git).
+- [Serie horaria regional 2023](../../results/timeseries/regional/demanda_regional_2023_horaria.parquet). La copia está excluida de Git por tamaño; su fuente original es `/srv/compartido/inbox/MERLIN_EDM/prototipo_3/data/rec_historica/2023/demanda_regional_2023_horaria.parquet`.

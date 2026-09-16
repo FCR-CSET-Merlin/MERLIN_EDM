@@ -1,0 +1,3 @@
+# Series horarias Parquet pesadas: se mantienen en el almacenamiento local,
+# pero no se versionan en Git. El índice documenta rutas, cobertura y hashes.
+*.parquet

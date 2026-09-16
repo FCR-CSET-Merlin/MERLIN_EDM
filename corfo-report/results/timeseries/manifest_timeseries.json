@@ -1,0 +1,37 @@
+{
+  "fecha_copia": "2026-09-16",
+  "nota": "Las copias Parquet se mantienen localmente y están excluidas de Git por su tamaño. Las fuentes originales permanecen intactas.",
+  "archivos": [
+    {
+      "ruta_relativa": "regional/demanda_regional_2023_horaria.parquet",
+      "fuente_original": "/srv/compartido/inbox/MERLIN_EDM/prototipo_3/data/rec_historica/2023/demanda_regional_2023_horaria.parquet",
+      "años": [2023],
+      "nivel": "regional",
+      "regiones": 16,
+      "filas": 140160,
+      "tamaño_bytes": 8613668,
+      "sha256": "9457ae67b36d257340c665affe64547c10cbad959d02aa0c1c05346d48f49de8"
+    },
+    {
+      "ruta_relativa": "regional/demanda_regional_2024_2025_horaria.parquet",
+      "fuente_original": "/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3/data/rec_2024_2025/results/capas_regionales/wp2_output_demanda_electrica_regional_ts.parquet",
+      "años": [2024, 2025],
+      "nivel": "regional",
+      "regiones": 16,
+      "filas": 280704,
+      "tamaño_bytes": 15728640,
+      "sha256": "a4c1b2732b6759aed4f3bf2148b6c7187b3fe1603255e62ee728f263c0deeab6"
+    },
+    {
+      "ruta_relativa": "comunal/demanda_comunal_2024_2025_horaria.parquet",
+      "fuente_original": "/srv/compartido/inbox/datos_modelos_MERLIN_EDM_prot_3/data/rec_2024_2025/results/capas_comunales/wp2_output_demanda_electrica_comunal_ts.parquet",
+      "años": [2024, 2025],
+      "nivel": "comunal",
+      "comunas": 345,
+      "regiones": 16,
+      "filas": 6052680,
+      "tamaño_bytes": 258998272,
+      "sha256": "dcf11a7ebf682531435e4da51b7679ffaf5ad97cc06705a539d250d92c3638c5"
+    }
+  ]
+}
